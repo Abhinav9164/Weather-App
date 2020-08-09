@@ -1,0 +1,194 @@
+.App {
+  background: linear-gradient(to top, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  position: fixed;
+  top: 100px;
+  z-index: 99;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.search-header {
+  display: flex;
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  flex-shrink: initial;
+  background-color: #fcefee;
+}
+
+.search-bar input {
+  border: 1px solid #fcefee;
+  background-color: #fcefee;
+  transition: border 0.5s;
+  width: 100%;
+  padding-left: 20px;
+  flex-shrink: 2;
+}
+
+.search-header .fa-search-location {
+  color: grey;
+  padding: 0 10px;
+}
+
+.search-header button {
+  background-color: transparent;
+  border: none;
+}
+
+.search-header .go-search-city {
+  width: 100px;
+  border: 1px solid black;
+  padding: 0 100px;
+}
+
+.search-header .fa-angle-double-right {
+  color: #7f81d6;
+  padding: 0 10px;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.fa-angle-double-right:hover {
+  cursor: pointer;
+}
+
+.suggestion-list {
+  position: relative;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.suggestion-list ul li {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suggestion-list ul li button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  
+}
+
+.suggestion-list ul li .list-item {
+  position: relative;
+  width: 100%;
+  transform: translateX(-4%);
+}
+
+.suggestion-list ul li .list-item:hover  {
+  cursor: pointer;
+  background-color: #e8ffe8;
+  color: #000000;
+}
+
+.weather-card {
+  color: #fff;
+  width: 800px;
+  vertical-align: middle;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.col > div {
+  margin: 10px 0;
+}
+
+.min-max-temp {
+  margin: 0 20px;
+  font-style: italic;
+}
+
+.cityName {
+  font-size: 65px;
+  font-weight: bolder;
+}
+
+.countryCode {
+  background-color: #a7ff83;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+
+.wheather-details-badge {
+  /* background-color: #364f6b; */
+  background: linear-gradient(to left, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
+  border-radius: 10px;
+}
+
+.title {
+  background-color: #fff;
+  /* background: transparent; */
+  /* color: #364f6b; */
+  color: #5d5d5a;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.data {
+  padding: 13px 15px;
+}
+
+.unit {
+  font-size: 12px;
+  /* vertical-align: text-bottom; */
+}
+
+@media (max-width: 800px) {
+  .weather-card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-header input {
+    width: 200px;
+  }
+
+  .search-header .fa-search-location {
+    display: none;
+  }
+}
