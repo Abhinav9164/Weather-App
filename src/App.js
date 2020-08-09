@@ -37,7 +37,6 @@ class App extends React.Component {
       inputCheck: false,
       data: []
     }})
-    console.log(this.state)
   }
 
   setSearch = () => {
@@ -61,9 +60,7 @@ class App extends React.Component {
 
   search = async (e) => {
       const data = await fetchWeather(this.state.search);
-      // console.log(data);
       this.setState({ data: [data] });
-      console.log(this.state.data.length)
   }
 
   renderSuggestions = () => {
